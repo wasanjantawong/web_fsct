@@ -45,7 +45,7 @@
   ======================================================= -->
 </head>
 
-<body>
+<body class="first_see">
   <header id="header">
     <div class="container">
 
@@ -73,7 +73,7 @@
     </div>
   </header>
 
-  <section class="first_see" id="home">
+  <section class="" id="home">
     <div class="container text-center">
 
       <div class="col-md-12">
@@ -355,6 +355,22 @@
         </div>
 
       </div>
+      <script>
+      $(document).ready(function(){
+          $("button").click(function(){
+
+      		 $.ajax({
+               url: "http://192.168.0.23:8080/fsctmain/public/getmainmaterialbyquotation?idtype=1&&idcompany=1&branch_id=1001",
+               success: function(data){
+                 $.each(data, function(key, value) {
+
+                          console.log(key);
+                        });
+
+      		    }});
+          });
+      });
+      </script>
     </section>
 
     <section class="contact" id="contact">
