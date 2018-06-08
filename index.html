@@ -350,24 +350,11 @@
 
           </div>
           <div class="col-lg-6 col-md-6 col-xs-12">
+              <h1 style="color: black;">map</h1>
           </div>
         </div>
 
       </div>
-      <script>
-      $(document).ready(function(){
-
-           $.ajax({
-               url: "http://192.168.0.23:8080/fsctmain/public/getbrachall",
-               success: function(data){
-                 $.each(data, function(key, value) {
-                        $("#D_tail").append("<p class='text-about-p text-left' ><u>" + data[key].name_branch +"</u><br/>" + data[key].address + "<br/>" + data[key].tel + "</p>");
-                          console.log(value);
-                        });
-
-              }});
-      });
-      </script>
     </section>
 
     <section class="contact" id="contact">
@@ -496,6 +483,7 @@
 
   <!-- Template Specisifc Custom Javascript File -->
   <script src="js/custom.js"></script>
+  <script src="js/js_fsct.js"></script>
 
   <script src="contactform/contactform.js"></script>
 

@@ -1,0 +1,27 @@
+ALTER TABLE `branch` ADD `lat` VARCHAR(255) NOT NULL AFTER `updatedate`, ADD `lng` VARCHAR(255) NOT NULL AFTER `lat`;
+UPDATE `branch` SET `lat`='18.811388',`lng`='98.996281' WHERE name_branch = 'เชียงใหม่2';
+UPDATE `branch` SET `lat`='18.81185',`lng`='98.996830' WHERE name_branch = 'ภาธร';
+UPDATE `branch` SET `lat`='19.952950',`lng`='99.850267' WHERE name_branch = 'เชียงราย2';
+UPDATE `branch` SET `lat`='19.945950',`lng`='99.846967' WHERE name_branch = 'เชียงรายแบบเหล็ก';
+UPDATE `branch` SET `lat`='19.172080',`lng`='99.905420' WHERE name_branch = 'พะเยา';
+UPDATE `branch` SET `lat`='18.277390',`lng`='99.484790' WHERE name_branch = 'ลำปาง';
+UPDATE `branch` SET `lat`='17.200650',`lng`='104.071000' WHERE name_branch = 'สกลนคร';
+UPDATE `branch` SET `lat`='14.213000',`lng`='100.608300' WHERE name_branch = 'บางปะอิน';
+UPDATE `branch` SET `lat`='14.770400',`lng`='100.704055' WHERE name_branch = 'ลพบุรี';
+UPDATE `branch` SET `lat`='17.389588',`lng`='102.825625' WHERE name_branch = 'อุดร2';
+UPDATE `branch` SET `lat`='15.017300',`lng`='103.108100' WHERE name_branch = 'บุรีรัมย์';
+UPDATE `branch` SET `lat`='16.361000',`lng`='102.805214' WHERE name_branch = 'ขอนแก่น1';
+UPDATE `branch` SET `lat`='16.457742',`lng`='102.831352' WHERE name_branch = 'ขอนแก่น2';
+UPDATE `branch` SET `lat`='16.202288',`lng`='103.268937' WHERE name_branch = 'มหาสารคาม';
+UPDATE `branch` SET `lat`='16.064888',`lng`='103.268937' WHERE name_branch = 'ร้อยเอ็ด';
+UPDATE `branch` SET `lat`='15.270610',`lng`='104.835600' WHERE name_branch = 'อุบล1';
+UPDATE `branch` SET `lat`='15.195000',`lng`='104.813900' WHERE name_branch = 'อุบล2';
+UPDATE `branch` SET `lat`='14.887500',`lng`='103.480700' WHERE name_branch = 'สุรินทร์';
+UPDATE `branch` SET `lat`='14.939035',`lng`='101.995470' WHERE name_branch = 'โคราช1';
+UPDATE `branch` SET `lat`='15.017800',`lng`='102.137956' WHERE name_branch = 'โคราช2';
+UPDATE `branch` SET `lat`='14.919650',`lng`='102.145700' WHERE name_branch = 'โคราช3';
+UPDATE `branch` SET `lat`='7.053677',`lng`='100.480030' WHERE name_branch = 'หาดใหญ่';
+UPDATE `branch` SET `lat`='9.508500',`lng`='99.946400' WHERE name_branch = 'นครพนม';
+UPDATE `branch` SET `lat`='9.10213',`lng`='99.322961' WHERE name_branch = 'สุราษฏร์ธานี';
+UPDATE `branch` SET `lat`='8.412593',`lng`='99.988500' WHERE name_branch = 'นครศรีธรรมราช';
+DELETE FROM `branch` WHERE lat = ' '
