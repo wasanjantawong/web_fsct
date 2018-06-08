@@ -46,14 +46,18 @@ div{
   color: #199EB8;
   margin-bottom: 25px;
   text-align: center;
-  margin-top: 1em;
+  margin-top: 0.8em;
+  font: normal normal normal 55px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;
 }
 .logo-fsct{
   border: 1px solid #167ac6;
   box-shadow: 0 0px 260px 0px;
 }
 section.about{
-  margin-top: 100em;
+  margin-top: 4.5em;
+}
+.about-grid{
+  padding-bottom: 3.5em;
 }
 
 /*
@@ -132,6 +136,7 @@ a {
 
 section {
   padding: 85px 0;
+  height: 100vh;
 }
 
 .card {
@@ -165,19 +170,43 @@ a:hover {
   color: #fff !important;
   opacity: .75;
 }
+div.padding-service{
+  padding: .5em 1em 1em 1em;
+}
+.text-about-p{
+      line-height: 1.7em;
+      font: normal normal normal 17px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif;
+      color: #3B3A3A;
+      text-indent: 2em;
+}
+.picture_about_bg{
+  background-image: url(../img/about/1.jpg);
+}
+.bg-about{
+  background-color: #f7f7f7;
+}
 
 /* ==================================================
   Hero Styling
 ================================================== */
-.hero {
+.first_see {
   display: table;
-  position: fixed;
+  //position: fixed;
   background-image: url(../img/bg/bg.jpg);
-
-  padding: 150px 0;
+  background-size: cover;
+  //background-position: -10em -6em;
   color: #fff;
   width: 100%;
   height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.down{
+  margin: 7em;
+}
+.bg-color{
+  background-color: #fff;
+  position: relative;
 }
 /*
 .hero:after {
@@ -208,13 +237,26 @@ a:hover {
 .hero-brand:hover {
   opacity: .75;
 }
-
+.welcome-head{
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.05em;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  font: normal normal normal 60px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;
+  font-size: 60px;
+}
+.img-service{
+  padding: 2em;
+}
+.padding-text-service{
+  padding: 0 2em 0 2em;
+}
+/*
 .tagline {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 26px;
   margin: 45px 0 75px 0;
   color: #fff;
-}
+}*/
 
 /* ==================================================
   Header Styling
@@ -660,10 +702,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #199EB8;
   margin-bottom: 25px;
 }
-
+/*
 .portfolio-grid {
   margin-top: 65px;
-}
+}*/
 
 .portfolio-grid .row {
   margin: 0;
