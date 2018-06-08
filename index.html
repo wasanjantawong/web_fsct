@@ -21,6 +21,7 @@
   <meta name="twitter:title" content="">
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="">
+      <meta name="viewport" content="initial-scale=1.0">
 
   <!-- Favicon
   <link href="img/favicon.ico" rel="icon">-->
@@ -44,6 +45,30 @@
     Author URL: https://bootstrapmade.com
   ======================================================= -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+  <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        height: 500px;
+        width: 600px;
+      }
+    </style>
+  
+  
+  
+  
 </head>
 
 <body class="first_see">
@@ -350,7 +375,108 @@
 
           </div>
           <div class="col-lg-6 col-md-6 col-xs-12">
+		  
+		     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK3RgqSLy1toc4lkh2JVFQ5ipuRB106vU&callback=initMap"
+    async defer></script>
+	
               <h1 style="color: black;">map</h1>
+			  
+			  
+			 <div id="map"></div>
+  
+    
+
+	
+	
+	
+	
+	  <script>
+    function initMap() {
+	var mapOptions = {
+	  center: {lat: 13.847860, lng: 100.604274},
+	  zoom: 6,
+	}
+		
+	var maps = new google.maps.Map(document.getElementById("map"),mapOptions);
+	
+	
+	
+	
+	 var jsonObj = [
+	 
+{"location":"เชียงใหม่", "lat": "18.811388", "lng": "98.996281"},
+{"location":"ภาธรไม้แบบ", "lat": "18.81185", "lng": "98.996830"},
+{"location":"เชียงราย 1", "lat": "19.952950", "lng": "99.850267"},
+{"location":"เชียงรายแบบเหล็ก", "lat": "19.945950", "lng": "99.846967"},
+{"location":"พะเยา", "lat": "19.172080", "lng": "99.905420"},
+{"location":"ลำปาง", "lat": "18.277390", "lng": "99.484790"},
+{"location":"สกลนคร", "lat": "17.200650", "lng": "104.071000"},
+{"location":"บางปะอิน", "lat": "14.213000", "lng": "100.608300"},
+{"location":"ลพบุรี", "lat": "14.770400", "lng": "100.704055"},
+{"location":"อุดร", "lat": "17.389588", "lng": "102.825625"},
+{"location":"บุรีรัมย์", "lat": "15.017300", "lng": "103.108100"},
+{"location":"ขอนแก่น 1", "lat": "16.361000", "lng": "102.805214"},
+{"location":"ขอนแก่น 2", "lat": "16.457742", "lng": "102.831352"},
+{"location":"มหาสารคาม", "lat": "16.202288", "lng": "103.268937"},
+{"location":"ร้อยเอ็ด", "lat": "16.064888", "lng": "103.616595"},
+{"location":"อุบล 1", "lat": "15.270610", "lng": "104.835600"},
+{"location":"อุบล 2", "lat": "15.195000", "lng": "104.813900"},
+{"location":"สุรินทร์", "lat": "14.887500", "lng": "103.480700"},
+{"location":"โคราช 1", "lat": "14.939035", "lng": "101.995470"},
+{"location":"โคราช 2", "lat": "15.017800", "lng": "102.137956"},
+{"location":"โคราช 3", "lat": "14.919650", "lng": "102.145700"},
+{"location":"หาดใหญ่", "lat": "7.053677", "lng": "100.480030"},
+{"location":"นครพนม", "lat": "9.508500", "lng": "99.946400"},
+{"location":"สุราษฏร์ธานี", "lat": "9.10213", "lng": "99.322961"},
+{"location":"นครศรีธรรมราช", "lat": "8.412593", "lng": "99.988500"},
+
+
+
+
+
+
+
+]
+
+
+$.each(jsonObj, function(i, item){
+
+});
+
+
+var marker, info;
+
+$.each(jsonObj, function(i, item){
+
+	marker = new google.maps.Marker({
+	   position: new google.maps.LatLng(item.lat, item.lng),
+	   map: maps,
+	   title: item.location
+	});
+
+  info = new google.maps.InfoWindow();
+
+  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	return function() {
+	  info.setContent(item.location);
+	  info.open(maps, marker);
+	}
+  })(marker, i));
+
+});
+
+
+
+
+
+
+
+	
+}
+  </script>
+			  
+			  
+			  
           </div>
         </div>
 
