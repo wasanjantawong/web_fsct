@@ -43,6 +43,7 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body class="first_see">
@@ -342,13 +343,11 @@
               <h2 class="h1-head">
                   สาขาต่างๆ
               </h2>
-              <p class="text-about-p">
-                1
-              </p>
-              <p class="text-about-p">
-                1
-              </p>
+              <div id="D_tail">
+
+              </div>
             </div>
+
           </div>
           <div class="col-lg-6 col-md-6 col-xs-12 picture_about_bg">
           </div>
@@ -357,18 +356,16 @@
       </div>
       <script>
       $(document).ready(function(){
-          $("button").click(function(){
 
-      		 $.ajax({
-               url: "http://192.168.0.23:8080/fsctmain/public/getmainmaterialbyquotation?idtype=1&&idcompany=1&branch_id=1001",
+           $.ajax({
+               url: "http://192.168.0.23:8080/fsctmain/public/getbrachall",
                success: function(data){
                  $.each(data, function(key, value) {
-
-                          console.log(key);
+                        $("#D_tail").append("<p class='text-about-p text-left' ><u>" + data[key].name_branch +"</u><br/>" + data[key].address + "<br/>" + data[key].tel + "</p>");
+                          console.log(value);
                         });
 
-      		    }});
-          });
+              }});
       });
       </script>
     </section>
